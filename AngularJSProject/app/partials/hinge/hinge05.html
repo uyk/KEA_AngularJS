@@ -1,0 +1,59 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        <a ui-sref="hinge">Hinge</a>
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        댐핑경첩 90도 IN
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <img src="resources/hinge05.png">
+    </div>
+    <div class="col-md-6 detail">
+        <form novalidate name="detailForm" class="container col-md-12"
+              ng-submit="addCart()">
+            <h4>댐핑경첩 90도 IN</h4>
+            <table class="table table-hover table-striped ">
+                <tbody>
+                <tr>
+                    <td>판매가 Default Price</td>
+                    <td>{{productDetail.defaultPrice}}원</td>
+                </tr>
+                <tr>
+                    <td>상품코드 Product Code</td>
+                    <td>{{productDetail.productCode}}</td>
+                </tr>
+                <tr>
+                    <td>원산지 Origin Country</td>
+                    <td>{{ productDetail.originCountry }}</td>
+                </tr>
+                <tr>
+                    <td>사이즈 Size</td>
+                    <td>
+                        <select ng-model="productDetail.size" class="form-control" ng-change="setPrice()" required>
+                            <option value="300">300mm</option>
+                            <option value="350">350mm  (+400원)</option>
+                            <option value="400">400mm  (+800원)</option>
+                            <option value="450">450mm (+1200원)</option>
+                            <option value="500">500mm (+1600원)</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>구매수량 Quantity</td>
+                    <td><input type="number" min ="0" max="100" class='form-control' value='1' ng-model="productDetail.quantity"></td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>{{productDetail.productName}} {{productDetail.size}}mm ({{productDetail.optionedPrice}}원) x {{productDetail.quantity}}
+                        = {{productDetail.optionedPrice * productDetail.quantity}}원</td>
+                </tr>
+                </tbody>
+            </table>
+            <button type="submit" ng-model="submit" class="btn btn-primary btn-md btn center-block">
+                주문
+            </button>
+        </form>
+    </div>
+</div>

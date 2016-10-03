@@ -1,0 +1,33 @@
+<div class="col-md-8"></div>
+<div class="input-group col-md-4">
+    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+    <input ng-model="searchInitials" type="text" class="form-control" placeholder="Search by initials" aria-describedby="basic-addon1">
+    <span class="input-group-btn">
+        <button class="btn btn-default" ng-click='searchFunc(searchInitials)' type="button">Search</button>
+    </span>
+</div>
+<p></p>
+<table class="table table-hover table-striped table-bordered">
+<thead>
+<tr>
+    <td>Management</td>
+    <td>Initials</td>
+    <td>Date</td>
+    <td>Student Name</td>
+    <td>Company Name</td>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="item in dummyInternships | internshipSearch:search">
+    <td><a ng-click="editInternship(item)" class="btn btn-primary">
+        <i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+        <a ng-click="deleteInternship(item)"  class="btn btn-danger">
+            <i class="fa fa-trash-o fa-lg" aria-hidden="true"></i> Delete</a></td>
+    <td>{{ item.initials }}</td>
+    <td>{{ item.date | date:'dd-MM-yyyy' }}</td>
+    <td>{{ item.studentName }}</td>
+    <td>{{ item.company }}</td>
+</tr>
+
+</tbody>
+</table>

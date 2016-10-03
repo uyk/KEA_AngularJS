@@ -1,0 +1,12 @@
+input {
+    margin-bottom: 40px;
+}
+.container {
+    margin-bottom: 40px;
+}
+#big input {
+    height: 200px;
+}
+#manage {
+    margin: 500px;
+}

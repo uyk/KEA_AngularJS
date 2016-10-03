@@ -1,0 +1,59 @@
+<form  novalidate name="internshipForm" class="container" ng-submit= "saveInternship()">
+    <div id = 'header' class="container page-header" >
+        <img src = "resources/songkang.jpg" class = "center-block" ><br/><br/>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <h4>Your KEA Initials</h4>
+            <input type = "text" ng-model="internship.initials" class="form-control" placeholder="ONLY your initials (not your e-mail)" aria-describedby="basic-addon1" required>
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+            <h4>Visit Date</h4>
+            <input type = "date" ng-model="internship.date" class="form-control" aria-describedby="basic-addon1" required>
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+
+    <div class="row">
+        <div class="col-lg-6">
+            <h4>Name of the student you visited</h4>
+            <input type = "text" ng-model="internship.studentName" class="form-control" placeholder="" aria-describedby="basic-addon1" required>
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+            <h4>ID of internship agreement</h4>
+            <input type = "text" ng-model="internship.studentId" class="form-control" placeholder="" aria-describedby="basic-addon1" required>
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+
+    <div class="row">
+        <div class="col-lg-6">
+            <h4> Company you visited</h4>
+            <input type = "text" ng-model = "internship.company" class="form-control" placeholder="" aria-describedby="basic-addon1" required>
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+            <h4>Name(s) of the persons you met at the company</h4>
+            <input type = "text" ng-model="internship.companyPerson" class="form-control" placeholder="" aria-describedby="basic-addon1" required>
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+
+    <div id='big'>
+        <h4>Company's thoughts on market trends</h4>
+        <input type = "text" ng-model="internship.trends" class="form-control" placeholder="Max 1.000 characters" aria-describedby="basic-addon1">
+
+        <h4> Company's competence needs</h4>
+        <input type = "text" ng-app="internship.needs" class="form-control" placeholder="Max 1.000 characters" aria-describedby="basic-addon1">
+
+        <h4>Students's competencies</h4>
+        <input type = "text" ng-model="internship.competencies" class="form-control" placeholder="Max 1.000 characters" aria-describedby="basic-addon1">
+
+        <h4>Cooperation opportunities with company</h4>
+        <input type = "text" ng-model="internship.cooperation" class="form-control" placeholder="Max 1.000 characters" aria-describedby="basic-addon1">
+
+        <h4>Miscellaneous</h4>
+        <input type = "text" ng-model="internship.etc" class="form-control" placeholder="Max 1.000 characters" aria-describedby="basic-addon1">
+    </div>
+
+    <button type="submit" ng-model="submit" class="btn btn-primary btn-lg btn center-block">
+        Send report to KEA CRM
+    </button>
+</form>

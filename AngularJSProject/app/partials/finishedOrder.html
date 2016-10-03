@@ -1,0 +1,128 @@
+<div class="jumbotron text-center">
+    <h1>Order Saved! Thank you</h1>
+    <p>You order is saved. <span class="text-danger">Please do an account transfer to account number below.</span>
+        Confirmation email will be sent to you soon.</p>
+</div>
+<table class="table table-hover table-striped table-bordered text-center">
+    <thead>
+    <tr>
+        <td>Bank Name</td>
+        <td>Account Number</td>
+        <td>Owner</td>
+        <td>Price</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>KBB 기업은행</td>
+        <td>658896-05-974538</td>
+        <td>유예겸</td>
+        <td>{{totalPrice}}원</td>
+    </tr>
+    </tbody>
+</table>
+
+<!--product info-->
+<table class="table table-hover table-striped table-bordered text-center">
+    <thead>
+    <tr>
+        <td>Product Details</td>
+        <td>Optioned Price</td>
+        <td>Quantity</td>
+        <td>Price</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in myCart">
+        <td>
+            <p>{{item.productName}}<span class="finishedOrderSpan">(Option - Length{{item.size}}mm)</span></p>
+        </td>
+        <td>{{ item.optionedPrice}}</td>
+        <td>{{ item.quantity}}</td>
+        <td>{{ item.optionedPrice * item.quantity}}원</td>
+    </tr>
+    </tbody>
+</table>
+<!-- customer info -->
+<div class="panel panel-default finishPanel">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa fa-user fa-2x" aria-hidden="true"></i>주문자 정보</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table table-hover table-striped table-bordered text-center">
+            <thead>
+            <tr>
+                <td>주문 고객 성함</td>
+                <td>유선 전화</td>
+                <td>무선 전화</td>
+                <td>이메일</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{customerInfo.name}}</td>
+                <td>{{customerInfo.telNumber}}</td>
+                <td>{{customerInfo.phoneNumber}}</td>
+                <td>{{customerInfo.email}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ship info -->
+<div class="panel panel-default finishPanel">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa fa-truck fa-2x" aria-hidden="true"></i>배송 정보</h3>
+    </div>
+    <div class="panel-body">
+
+        <table class="table table-hover table-striped table-bordered text-center">
+            <thead>
+            <tr>
+                <td>배송 받는 분</td>
+                <td>유선 전화</td>
+                <td>무선 전화</td>
+                <td class="col-md-5">이메일</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{shipInfo.name}}</td>
+                <td>{{shipInfo.telNumber}}</td>
+                <td>{{shipInfo.phoneNumber}}</td>
+                <td>{{shipInfo.email}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table table-hover table-striped table-bordered text-center">
+            <thead>
+            <tr>
+                <td class="col-md-1">우편번호</td>
+                <td>주소</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{shipInfo.postNumber}}</td>
+                <td>{{shipInfo.address}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table table-hover table-striped table-bordered text-center">
+            <thead>
+            <tr>
+                <td>메세지</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{shipInfo.message}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<button ng-click="finish()" class="btn btn-primary btn-lg btn center-block">
+    Finish
+</button>

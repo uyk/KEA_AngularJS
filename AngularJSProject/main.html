@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script> angular.module('songkangApp', ['ui.router', 'ngResource']);</script>
+
+    <!--Navigation-->
+    <script src="app/javaScripts/navigation/navigation.js"></script>
+    <script src="app/javaScripts/navigation/bearingSlideNavigation.js"></script>
+    <script src="app/javaScripts/navigation/drawerSlideNavigation.js"></script>
+    <script src="app/javaScripts/navigation/hingeNavigation.js"></script>
+    <!--Controller common-->
+    <script src="app/javaScripts/controller/mainController.js"></script>
+    <script src="app/javaScripts/controller/homeController.js"></script>
+    <script src="app/javaScripts/controller/drawerSlideController.js"></script>
+    <script src="app/javaScripts/controller/hingeController.js"></script>
+    <script src="app/javaScripts/controller/testCertificationController.js"></script>
+    <script src="app/javaScripts/controller/contactController.js"></script>
+    <script src="app/javaScripts/controller/cartController.js"></script>
+    <script src="app/javaScripts/controller/orderController.js"></script>
+    <script src="app/javaScripts/controller/finishedOrderController.js"></script>
+    <!--Controller bearingSlide-->
+    <script src="app/javaScripts/controller/bearingSlide/bearingSlideController01.js"></script>
+    <script src="app/javaScripts/controller/bearingSlide/bearingSlideController02.js"></script>
+    <script src="app/javaScripts/controller/bearingSlide/bearingSlideController03.js"></script>
+    <script src="app/javaScripts/controller/bearingSlide/bearingSlideController04.js"></script>
+    <script src="app/javaScripts/controller/bearingSlide/bearingSlideController05.js"></script>
+    <!--Controller drawer Slide-->
+    <script src="app/javaScripts/controller/drawerSlide/drawerSlideContoller01.js"></script>
+    <!--Controller hinge-->
+    <script src="app/javaScripts/controller/hinge/hingeController01.js"></script>
+    <script src="app/javaScripts/controller/hinge/hingeController02.js"></script>
+    <script src="app/javaScripts/controller/hinge/hingeController03.js"></script>
+    <script src="app/javaScripts/controller/hinge/hingeController04.js"></script>
+    <script src="app/javaScripts/controller/hinge/hingeController05.js"></script>
+    <script src="app/javaScripts/controller/hinge/hingeController06.js"></script>
+    <script src="app/javaScripts/controller/hinge/hingeController07.js"></script>
+    <script src="app/javaScripts/controller/hinge/hingeController08.js"></script>
+    <script src="app/javaScripts/controller/hinge/hingeController09.js"></script>
+    <script src="app/javaScripts/controller/hinge/hingeController10.js"></script>
+
+    <script src="app/javaScripts/controller/newInternshipFormController.js"></script>
+    <script src="app/javaScripts/controller/allDataController.js"></script>
+    <!--Other Javascript-->
+    <script src="app/javaScripts/filter.js"></script>
+    <script src="app/javaScripts/internshipService.js"></script>
+    <script src="app/javaScripts/orderService.js"></script>
+
+    <title>Song Kang Industry - Furniture Fittings and Applications</title>
+
+</head>
+
+
+<body ng-app="songkangApp">
+<div ng-controller="mainController">
+<!-- NAVIGATION -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container mainNav">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a  ui-sref="home" class="navbar-brand"><img alt = "SONGKANG" src = "resources/songkang_min.jpg"></a>
+        </div>
+        <div class="mainNav2 collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="home">Home</a></li>
+                <li><a ui-sref="bearingSlide" >Bearing Slide</a></li>
+                <li><a ui-sref="drawerSlide">Drawer Slide</a></li>
+                <li><a ui-sref="hinge">Hinge</a></li>
+                <li><a ui-sref="testCertification">Test Certification</a></li>
+                <li><a ui-sref="contact">Contact</a></li>
+                <li class="cartTap"><a ui-sref="cart" style="color: snow" >Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                <!--<li><a ui-sref="newInternship">New Internship</a></li>-->
+                <!--<li><a ui-sref="allData">All Students</a></li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--Test-->
+<!-- MAIN CONTENT -->
+<div class="container" id="mainContent">
+    <div ui-view></div>
+</div>
+
+<!--BOTTOM-->
+<div class="text-center mainBottom">
+    <p>MADE BY YEGYEOM YU</p>
+    <p>Contact with E-mail: <a href="mailto:yegy0001@stud.kea.dk">yegy0001@stud.kea.dk</a></p>
+</div>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+</div>
+</body>
+
+</html>

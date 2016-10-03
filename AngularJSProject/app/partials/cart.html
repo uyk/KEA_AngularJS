@@ -1,0 +1,55 @@
+<div class="cart container" >
+    <div class="header">Shopping Cart</div>
+    <table class="table table-hover table-striped table-bordered">
+    <thead>
+        <tr>
+            <td class="text-center">Product Details</td>
+            <td class="text-center">Optioned Price</td>
+            <td class="text-center">Quantity</td>
+            <td class="text-center">Price</td>
+            <td class="text-center">Remove</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in myCart">
+            <td>
+                <div class="thumbnail right-caption">
+                    <img src="resources/ball01.png" alt="Product thumbnail" class="col-sm-6 col-md-4">
+                    <div class="caption">
+                        <h3>{{item.productName}}</h3>
+                        <p>Option - Length {{item.size}}mm
+                            <!--<a href="#" class="btn btn-default btn-sm" role="button">change option</a></p>-->
+                    </div>
+                </div>
+            </td>
+            <td class="smallRoom text-center">{{ item.optionedPrice}}</td>
+            <td class="smallRoom text-center">{{ item.quantity}}</td>
+            <td class="smallRoom text-center">{{ item.optionedPrice * item.quantity}}원</td>
+            <td>
+                <a ng-click="deleteFromCart(myCart,$index)"  class="btn btn-danger center-block">
+                    <i class="fa fa-trash-o fa-lg" aria-hidden="true"></i> Delete</a>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+
+    <div class="cartFinalPrice col-md-4 clearfix">
+        <table class ="table table-hover  table-bordered">
+            <tr>
+                <td>총 수량</td>
+                <td>총 제품 가격</td>
+                <td>배송비</td>
+                <td>합계 금액</td>
+            </tr>
+            <tr>
+                <td>{{totalQuantity}}</td>
+                <td>{{totalPrice}}</td>
+                <td>2500</td>
+                <td>{{totalPrice + 2500}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="clearfix"></div>
+    <a ng-click="gotoOrder(myCart)"  class="btn btn-primary btn-lg cartOrderButton">
+        <i class="fa fa-shopping-bag fa-lg" aria-hidden="true"></i> Buy All </a>
+</div>

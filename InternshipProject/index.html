@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script> angular.module('internshipApp', ['ui.router', 'ngResource']);</script>
+
+    <script src="app/javaScripts/navigation.js"></script>
+    <script src="app/javaScripts/newInternshipFormController.js"></script>
+    <script src="app/javaScripts/allDataController.js"></script>
+    <script src="app/javaScripts/filter.js"></script>
+
+    <title>Internship Project</title>
+
+</head>
+
+
+<body ng-app="internshipApp">
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand">Internship</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="newInternship">New Form</a></li>
+        <li><a ui-sref="allData">All Internships & Management</a></li>
+    </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <div ui-view></div>
+</div>
+
+<!--BOTTOM-->
+<div class="text-center">
+    <p>MADE BY YEGYEOM YU</p>
+    <p>Contact with E-mail: <a href="mailto:yegy0001@stud.kea.dk">yegy0001@stud.kea.dk</a></p>
+</div>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+</body>
+</html>

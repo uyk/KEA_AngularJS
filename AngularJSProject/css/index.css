@@ -1,0 +1,92 @@
+#mainContent {
+    padding-top: 110px;
+}
+.mainBottom {
+    margin-top: 40px;
+}
+#contact {
+    padding-left: 60px;
+    padding-top: 10px;
+}
+#manage {
+    margin: 500px;
+}
+#product .text-primary {
+    font-weight: bold;
+}
+.col-md-6 table {
+    font-size: small;
+}
+.mainNav {
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+.mainNav2 {
+    margin-top: 10px;
+}
+.cartTap {
+    font-size: large;
+    font-weight: bold;
+}
+.cartTap i {
+    margin-left: 2px;
+}
+.cart .header {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.cartFinalPrice {
+    float: right;
+}
+.cartOrderButton {
+    float: right;
+    margin-right: 15px;
+}
+.order p {
+    font-size: medium;
+    font-weight: bold;
+}
+.order i {
+    margin-top: 20px;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+.orderTable {
+    margin-left: 25px;
+}
+.orderFormCustomerInfo {
+    border-color: #8699a4;
+    border-width: thin;
+    border: solid;
+    margin-bottom: 30px;
+    margin: 10px;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+.orderFormShipInfo {
+    border-color: #8699a4;
+    border-width: thin;
+    border: solid;
+    margin-bottom: 30px;
+    margin: 10px;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+.orderFormButton {
+    margin-bottom: 20px;
+}
+.finishedOrderSpan {
+    padding-left: 20px;
+}
+.finishPanel {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.panel-heading p {
+    font-size: medium;
+    font-weight: bold;
+}
+.panel-heading i {
+    padding-right: 10px;
+}
